@@ -1,0 +1,109 @@
+header {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  padding: 20px;
+  background: linear-gradient(270deg, #f5f5dc, #808080);
+  background-size: 400% 400%;
+
+  -webkit-animation: fondo 8s ease 1;
+  animation: fondo 8s ease 1;
+}
+
+#registrarse:hover{
+  cursor: pointer;
+}
+
+header > div > img {
+  width: 80% ; margin-left: 15px;
+}
+
+.izquierda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  color: black;
+  /*
+  text-align: center; para alinear texto 
+  */
+}
+
+.izquierda > h1{
+
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.izquierda > h2{
+  font-size: 28px;
+  font-weight: 280;
+}
+
+.izquierda > div{
+  display: flex;
+  gap: 0px;
+}
+
+.izquierda > div > input{
+  border-radius: 25px 0px 0px 25px;
+  border: color deepskyblue;
+  border: none;
+  padding: 5px;
+  font-size: 22px;
+}
+
+.izquierda > div > button{
+  border-radius: 0px 25px 25px 0px;
+  background: white;
+  color: deepskyblue;
+  font-weight: 600;
+  border: none;
+  border-left: 1px solid deepskyblue;
+  padding: 5px;
+}
+
+.derecha{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+PSEUDO ELEMENTOS
+se utilizan para darle estilos a parte especificas de un elemento
+::after (después del contenido)
+::before (antes del contenido)
+::first-letter (primera letra)
+::first-line (primera línea)
+::selection (texto seleccionado)
+::placeholder (texto de input)
+
+
+input::placeholder{
+  color: black;
+}
+  p::after {
+  content: rocket;
+ }
+*/
+
+
+@-webkit-keyframes fondo {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes fondo {
+  0%{
+    background-position:0% 50%;
+    height: 50vh;
+  }
+  50%{
+    background-position:100% 50%;
+    height: 100vh;
+  }
+  100%{
+    background-position:0% 50%;
+    height: 50vh;
+  }
+}

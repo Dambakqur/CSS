@@ -1,0 +1,129 @@
+:root{
+  --color-principal: black; 
+}
+nav {
+  padding: 10px 20px; 
+  
+  /*
+  los valores se leen en el sentido de las agujas del reloj,
+  iniciando desde las 12:00 
+  padding: 10px 20px 10px 20px
+  hay otra manera de hacer esto, pero es mucho más larga
+  padding-top: 10px;
+  padding-rigt: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  background: linear-gradient(90deg, #f5f5dc, #808080);
+}
+
+nav > div {
+  display: flex;
+  /*flex-direction: colum;*/
+  justify-content: center; align-items: center;
+  gap: 12px;
+}
+/*
+clases:
+las clases se utilizan para darle estilos a un grupo de elementos
+*/
+nav > div > p:hover {
+  font-weight: 600;
+  cursor: pointer;
+  transition: font-weight 0.5s;
+}
+#contacto {
+  background-color: var(--color-principal);
+color: rgb(255, 255, 255);
+/*
+  los colores se pueden poner en hexadecimal rgb, rgba, hsl, hsla
+*/
+border: 2px dotted rgb(205, 247, 205);
+border-radius: 20px;
+cursor: pointer;
+}
+
+/*PSEUDO CLASES*/
+/*Manejan los estados de un elemento*/
+/*
+Lista de Pseudo clases
+:active (cuando se da click)
+:focus (cuando se selecciona)
+:hover (cuando se pasa el mouse)
+:visited (cuando ya se visitó
+:link (cuando no se ha visitado)
+:first-child (primer hijo)
+:last-child (útlimo hijo)
+*/
+#contacto:hover {
+  background-color: paleturquoise;
+  color: dimgray;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/*
+Query responsive
+*/
+
+/*Extra small devices (phones, 600px and down)*/
+@media only screen and (max-width: 600px){
+  body{
+    background-color: brown; 
+  }
+  
+
+}
+/*Small devices (portrait tablets and large phones, 600 px and up)*/
+@media only screen and (min-width: 600px){
+  body{
+    background-color: brown; 
+  }
+  
+}
+/*Medium devices (landscapes tablets, 768px and up*/
+@media only screen and (min-width: 768px){
+
+}
+
+
+
+/*Large devices (laptops/desktops, 992px and up*/
+@media only screen and (min-width: 992px){
+  .menu{
+    display: flex;
+  }  
+
+
+.menu-responsive{
+  display: none;
+}
+}
+/*Extra large devices (large laptops and desktops, 1200px and up)*/
+@media only screen and (min-width: 1200px){
+  .menu{
+    display: flex;
+  }  
+
+
+.menu-responsive{
+  display: none;
+}
+}
+
+/*
+Crear otros archivos llamados ejercicios_css.html
+ejercicios.css
+Crea un div que sea una columna y contenga tres divs que sean una fila cada uno
+y cada div contenga 2 parrafos que estén en columnas alineados en el medio tanto vertical
+como horizontal
+*/
+
+/*
+OPCIONAL
+agregarle estilos al CV anteriormente realizado
+(lo pueden realizar si desean practicar css un poco más)
+*/
